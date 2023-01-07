@@ -5,5 +5,8 @@
 	"eslint.validate": ["javascript"],
 	"[json][yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	}
 }

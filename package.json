@@ -15,14 +15,13 @@
 	"scripts": {
 		"dev": "vuepress dev src",
 		"build": "npm run lint && vuepress build src",
-		"lint": "eslint --fix 'src/.vuepress/**/*.{js,vue}' --no-ignore"
+		"lint": "eslint --fix 'src' --no-ignore"
 	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.19.1",
 		"eslint": "8.31.0",
 		"eslint-config-vuepress": "3.10.0",
-		"eslint-plugin-markdown": "3.0.0",
-		"eslint-plugin-promise": "6.1.1",
+		"eslint-plugin-markdownlint": "^0.4.0",
 		"eslint-plugin-vue": "9.8.0",
 		"prettier": "2.8.1",
 		"vuepress": "^1.9.8"
