@@ -1,0 +1,9 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"editor.codeActionsOnSave": ["source.addMissingImports", "source.fixAll.eslint"],
+	"eslint.validate": ["javascript"],
+	"[json][yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}

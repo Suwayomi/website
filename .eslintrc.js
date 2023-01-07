@@ -27,6 +27,6 @@ module.exports = {
 			},
 		],
 		curly: ["error", "all"],
-		"vue/multi-word-component-names": "off"
+		"vue/multi-word-component-names": "off",
 	},
 };
