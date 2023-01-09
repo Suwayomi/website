@@ -1,8 +1,8 @@
 {
-    "recommendations": [
-      "dbaeumer.vscode-eslint",
-      "esbenp.prettier-vscode",
-      "davidanson.vscode-markdownlint",
-    ]
-  }
-  
+	"recommendations": [
+		"jcbuisson.vue",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"davidanson.vscode-markdownlint"
+	]
+}

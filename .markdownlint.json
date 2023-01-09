@@ -1,5 +1,6 @@
 {
 	"MD001": false,
+	"MD013": { "line_length": 90 },
 	"MD024": false,
 	"MD025": { "front_matter_title": "" },
 	"MD033": false

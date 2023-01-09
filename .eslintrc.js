@@ -1,19 +1,19 @@
 module.exports = {
 	env: {
 		browser: true,
-		es6: true,
+		es2021: true,
 	},
 
 	overrides: [
 		{
-			extends: ["vuepress", "prettier"],
+			extends: ["plugin:vue/essential", "vuepress", "prettier"],
 			plugins: ["vue", "prettier"],
 			files: ["*.js", "*.vue"],
-			parser: "@babel/eslint-parser",
 			parserOptions: {
-				ecmaVersion: 2018,
-				requireConfigFile: false,
+				parser: "@babel/eslint-parser",
+				ecmaVersion: 12,
 				sourceType: "module",
+				requireConfigFile: false,
 			},
 			rules: {
 				"prettier/prettier": [
@@ -38,7 +38,7 @@ module.exports = {
 			extends: ["plugin:markdownlint/recommended"],
 			rules: {
 				"markdownlint/md001": ["off"], // header hierarchy
-				"markdownlint/md013": ["warn"], // line length limit
+				"markdownlint/md013": ["warn", { line_length: 90 }], // line length limit
 				"markdownlint/md024": ["off"], // no two headers with the same text
 				"markdownlint/md025": ["error", { front_matter_title: "" }], // h1 != front matter title
 				"markdownlint/md033": ["off"], // no inline html

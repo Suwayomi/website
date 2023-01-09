@@ -1,3 +1,30 @@
+const sideBar = {
+	default: [
+		{
+			title: "Frequently Asked Questions",
+			path: "/help/faq/",
+		},
+		{
+			title: "Guides",
+			collapsable: false,
+			sidebarDepth: 2,
+			children: [
+				"/help/guides/getting-started",
+				"/help/guides/troubleshooting",
+				// "/help/guides/backups",
+				// "/help/guides/categories",
+				"/help/guides/local-manga",
+			],
+		},
+		// {
+		// 	title: "Tachidesk",
+		// 	collapsable: false,
+		// 	sidebarDepth: 2,
+		// 	children: ["/help/contribution", "/download/", "/extensions/", "/forks/"],
+		// },
+	],
+};
+
 module.exports = {
 	title: "Suwayomi - Tachidesk",
 	description: "A free and open source manga reader server that runs extensions built for Tachiyomi.",
@@ -13,11 +40,16 @@ module.exports = {
 		docsDir: "src",
 		editLinks: true,
 		editLinkText: "",
+		lastUpdated: "Last Updated",
 		nav: [
-			{ text: "Guide", link: "/guide/" },
+			{ text: "Home", link: "/" },
+			{ text: "Help Center", link: "/help/" },
+			{ text: "Download", link: "/download/" },
 			{ text: "Discord", link: "https://discord.gg/DDZdqZWaHA" },
 		],
-		sidebar: ["", "/guide/"],
+		sidebar: {
+			"/help/guides/": sideBar.default,
+			"/help/faq/": sideBar.default,
+		},
 	},
-	lastUpdated: "Last Updated",
 };
