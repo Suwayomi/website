@@ -14,4 +14,11 @@ export default ({
 	Vue.mixin({ store });
 
 	setupTrackerOauthHandler(router);
+	router.addRoute({
+		path: "/tachiyomi-extension",
+		beforeEnter() {
+			window.location.href =
+				"tachiyomi://add-repo?url=https://raw.githubusercontent.com/suwayomi/tachiyomi-extension/repo/index.min.json";
+		},
+	});
 };
