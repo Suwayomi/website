@@ -37,9 +37,6 @@ jobs:
             - name: Build website
               run: yarn build
 
-            - name: Add .nojekyll
-              run: touch ./out/.nojekyll
-
             - name: Deploy website
               uses: peaceiris/actions-gh-pages@v3
               with:
