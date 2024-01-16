@@ -6,11 +6,24 @@
   "license": "MPL-2.0",
   "private": true,
   "repository": "git@github.com:Suwayomi/website.git",
-	"bugs": {
-		"url": "https://github.com/Suwayomi/website/issues"
-	},
-	"homepage": "https://github.com/Suwayomi/website",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "bugs": {
+    "url": "https://github.com/Suwayomi/website/issues"
+  },
+  "homepage": "https://github.com/Suwayomi/website",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^14.0.4",
+    "nextra": "^2.13.2",
+    "nextra-theme-docs": "^2.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.4",
+    "typescript": "^5.3.3"
+  }
 }
