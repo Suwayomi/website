@@ -1,17 +1,37 @@
 import React, { useEffect, useState } from "react";
 
-export function TrackerOauth() {
-    const [clientName, setClientName] = useState('Suwayomi client');
+export function parseParams() {
+        let query = window.location.search;
+        if (query.length === 0) {
+            // anilist passes hash instead of query string
+            query = window.location.hash;
+            query = query.replace("#", "?");
+        }
 
-    useEffect(() => {
-        const query = window.location.search;
+        if (query.length === 0) {
+            throw new Error("No query string found");
+        }
+
         const urlParams = new URLSearchParams(query);
         
     	const { redirectUrl, clientName } = JSON.parse(urlParams.get("state"));
 
-        if (clientName !== undefined) setClientName(clientName);
+        return { redirectUrl, clientName, query };
+}
 
-        window.location.href = `${redirectUrl}${query}`;
+export function TrackerOauth() {
+    const [clientName, setClientName] = useState('Suwayomi client');
+
+    useEffect(() => {
+        try {
+            const { redirectUrl, clientName, query } = parseParams();
+
+            if (clientName !== undefined) setClientName(clientName);
+
+            window.location.href = `${redirectUrl}${query}`;
+        } catch (e) {
+            console.error(e);
+        }
     }, []);
     
     return (
