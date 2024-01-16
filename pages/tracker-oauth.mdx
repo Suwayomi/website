@@ -1,21 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 export function TrackerOauth() {
+    const [clientName, setClientName] = useState('Suwayomi client');
+
     useEffect(() => {
         const query = window.location.search;
         const urlParams = new URLSearchParams(query);
         
-    	const { redirectUrl } = JSON.parse(urlParams.get("state"));
+    	const { redirectUrl, clientName } = JSON.parse(urlParams.get("state"));
+
+        if (clientName !== undefined) setClientName(clientName);
 
         window.location.href = `${redirectUrl}${query}`;
     }, []);
     
     return (
-        <></>
+        <>Your browser will open a link to your {clientName}.</>
     );
 }
 
+
 <TrackerOauth />
 
-Your browser will open a link. Referesh the page if it doesn't work.
+
+Referesh the page if it doesn't work.
+
 
