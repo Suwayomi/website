@@ -11,8 +11,12 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/Suwayomi/website',
   footer: {
-    text: 'Built with ❤️ using Nextra',
+    text: <span>Built with ❤️ using <a href="https://nextra.site">Nextra</a>, MPL-2.0 Licensed - Copyright (C) Contributors to the Suwayomi project</span>,
   },
+
+  useNextSeoProps: () => ({
+    titleTemplate: '%s – Suwayomi Offical Website'
+  })
 };
 
 export default config;
