@@ -1,5 +1,12 @@
 {
-    "index": "Home",
+    "index": {
+        "type": "page",
+        "title": "Home",
+        "display": "hidden",
+        "theme": {
+            "layout": "raw"
+        }
+    },
 
     "suwayomi-webui-preview": {
         "type": "page",

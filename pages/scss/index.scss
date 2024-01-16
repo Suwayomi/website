@@ -1,0 +1,46 @@
+.index {
+    height: calc(100vh - 229px);
+    width: 100vw;
+    padding: 40px 0px;
+
+    .container {
+        width: 100%;
+        height: 100%;
+
+        margin: auto;
+
+        .hero {
+            margin-bottom: 40px;
+
+            .title {
+                padding-bottom: 10px;
+
+                font-size: 4rem;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .sub-title {
+                font-size: 2rem;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+        .cta {
+            button {
+                display: block;
+
+                margin: 0 auto;
+
+                width: 100px;
+                height: 40px;
+                
+                // color: black;
+
+                background-color: rgb(120, 186, 236);
+                border-radius: 12px;
+            }
+        }
+    }
+}
