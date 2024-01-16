@@ -1,0 +1,16 @@
+import React, { useEffect } from "react";
+
+export function TachiyomiExtension() {
+    useEffect(() => {
+        window.location.href = "tachiyomi://add-repo?url=https://raw.githubusercontent.com/suwayomi/tachiyomi-extension/repo/index.min.json";
+    }, []);
+    
+    return (
+        <></>
+    );
+}
+
+<TachiyomiExtension />
+
+Your browser will open a link. Referesh the page if it doesn't work.
+
