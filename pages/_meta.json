@@ -1,5 +1,13 @@
 {
-    "index": "Introduction",
+    "index": "Home",
+
+    "suwayomi-webui-preview": {
+        "type": "page",
+        "title": "Online WebUI Preview",
+        "href": "https://suwayomi-webui-preview.github.io/",
+        "newWindow": true
+    },
+
     "tachiyomi-extension": {
         "display": "hidden"
     },
