@@ -1,0 +1,21 @@
+import React, { useEffect } from "react";
+
+export function TrackerOauth() {
+    useEffect(() => {
+        const query = window.location.search;
+        const urlParams = new URLSearchParams(query);
+        
+    	const { redirectUrl } = JSON.parse(urlParams.get("state"));
+
+        window.location.href = `${redirectUrl}${query}`;
+    }, []);
+    
+    return (
+        <></>
+    );
+}
+
+<TrackerOauth />
+
+Your browser will open a link. Referesh the page if it doesn't work.
+
