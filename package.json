@@ -1,0 +1,16 @@
+{
+  "name": "suwayomi-website",
+  "version": "2.0.0",
+  "description": "Official website for Suwayomi projects",
+  "main": "index.js",
+  "license": "MPL-2.0",
+  "private": true,
+  "repository": "git@github.com:Suwayomi/website.git",
+	"bugs": {
+		"url": "https://github.com/Suwayomi/website/issues"
+	},
+	"homepage": "https://github.com/Suwayomi/website",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
